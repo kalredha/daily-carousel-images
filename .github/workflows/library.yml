@@ -1,0 +1,24 @@
+name: Refresh photo library
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['library/queries.json', 'scripts/fetch-library.mjs', '.github/workflows/library.yml']
+  schedule:
+    - cron: '17 1 * * 1'   # Mondays 05:17 Dubai
+permissions:
+  contents: write
+concurrency: library
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - run: node scripts/fetch-library.mjs
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A images/library manifest.json LICENSES.md
+          git diff --cached --quiet && echo "no changes" || (git commit -m "Refresh photo library" && git push)
