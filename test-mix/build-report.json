@@ -1,0 +1,101 @@
+[
+  {
+    "slide": 1,
+    "png": "01-dubai-property-market-enters-new-phase-of-maturity.png",
+    "article_url": "https://www.khaleejtimes.com/business/dubai-property-market-enters-new-phase-of-maturity-in-2026",
+    "photo": null,
+    "visual": "data",
+    "fallback_from": null,
+    "chart": "stat",
+    "placeholder": false,
+    "photo_error": null,
+    "fits": true,
+    "font_scale": 1
+  },
+  {
+    "slide": 2,
+    "png": "02-dubai-property-market-shifts-as-ready-home-sales-j.png",
+    "article_url": "https://www.arabianbusiness.com/real-estate/dubai-property-market-shifts-as-ready-home-sales-jump-18-and-prices-stabilise",
+    "photo": {
+      "id": "commons-77350166",
+      "file": "images/library/commons-77350166.jpg",
+      "url": null,
+      "sha256": "773f6f733ab0fe696e8d93a09e989cc345483d158c2f1c778f414d5045277099",
+      "bytes": 224685,
+      "attribution": "imran shahabuddin / CC BY 2.0 / Wikimedia Commons"
+    },
+    "visual": "photo",
+    "fallback_from": null,
+    "chart": null,
+    "placeholder": false,
+    "photo_error": null,
+    "fits": true,
+    "font_scale": 1
+  },
+  {
+    "slide": 3,
+    "png": "03-dubai-ready-villa-sales-jump-october.png",
+    "article_url": "https://www.khaleejtimes.com/business/property/dubai-ready-villa-sales-jump-october",
+    "photo": null,
+    "visual": "data",
+    "fallback_from": null,
+    "chart": "compare",
+    "placeholder": false,
+    "photo_error": null,
+    "fits": true,
+    "font_scale": 1
+  },
+  {
+    "slide": 4,
+    "png": "04-dubai-property-off-plan-apartments-now-cheaper-tha.png",
+    "article_url": "https://www.arabianbusiness.com/real-estate/dubai-property-off-plan-apartments-now-cheaper-than-ready-homes-as-buyers-find-lower-entry-prices",
+    "photo": {
+      "id": "commons-82583102",
+      "file": "images/library/commons-82583102.jpg",
+      "url": null,
+      "sha256": "7f53dbd7f54e41a9de1ca1c29b6baf846347de9a244c0d1cafd5be7dc9301401",
+      "bytes": 337323,
+      "attribution": "Robert Bock / CC0 / Wikimedia Commons"
+    },
+    "visual": "photo",
+    "fallback_from": null,
+    "chart": null,
+    "placeholder": false,
+    "photo_error": null,
+    "fits": true,
+    "font_scale": 1
+  },
+  {
+    "slide": 5,
+    "png": "05-dubai-luxury-property-sales-hit-23-2bn-as-13-apart.png",
+    "article_url": "https://www.arabianbusiness.com/real-estate/dubai-luxury-property-sales-hit-23-2bn-as-13-apartments-sell-for-over-aed100m-each",
+    "photo": null,
+    "visual": "data",
+    "fallback_from": null,
+    "chart": "share",
+    "placeholder": false,
+    "photo_error": null,
+    "fits": true,
+    "font_scale": 1
+  },
+  {
+    "slide": 6,
+    "png": "06-dubai-homebuyers-mortgage-uae-banks-emaar.png",
+    "article_url": "https://www.arabianbusiness.com/real-estate/dubai-homebuyers-mortgage-uae-banks-emaar",
+    "photo": {
+      "id": null,
+      "file": "test-mix/ai-1.png",
+      "url": null,
+      "sha256": "0e5e2ad41b95d1528d862c1e719dd1dbf56550750977db3bbff178c01a76103f",
+      "bytes": 2111526,
+      "attribution": "صورة توضيحية مولّدة بالذكاء الاصطناعي"
+    },
+    "visual": "ai",
+    "fallback_from": null,
+    "chart": null,
+    "placeholder": false,
+    "photo_error": null,
+    "fits": true,
+    "font_scale": 1
+  }
+]

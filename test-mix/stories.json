@@ -1,0 +1,210 @@
+[
+  {
+    "url": "https://www.khaleejtimes.com/business/dubai-property-market-enters-new-phase-of-maturity-in-2026",
+    "domain": "khaleejtimes.com",
+    "published": "2026-11-18",
+    "title": "تصرفات عقارات دبي تقترب من 625 مليار درهم في عشرة أشهر",
+    "bullets": [
+      "أكثر من 181 ألف صفقة عقارية من يناير إلى أكتوبر 2026",
+      "قيمة المبيعات في أكتوبر ارتفعت +18% عن سبتمبر إلى نحو 34.8 مليار درهم",
+      "عدد الصفقات في أكتوبر زاد +5% بعد شهرين متتاليين من التراجع"
+    ],
+    "keywords_en": [
+      "dubai",
+      "property sales",
+      "transactions",
+      "market"
+    ],
+    "visual_hint": "data",
+    "chart": {
+      "type": "stat",
+      "value": "+18%",
+      "label": "قيمة مبيعات أكتوبر مقارنة بسبتمبر",
+      "sub": "نحو 34.8 مليار درهم"
+    },
+    "photo": null,
+    "visual": "data",
+    "photo_reason": "chart from the article figures"
+  },
+  {
+    "url": "https://www.arabianbusiness.com/real-estate/dubai-property-market-shifts-as-ready-home-sales-jump-18-and-prices-stabilise",
+    "domain": "arabianbusiness.com",
+    "published": "2026-11-20",
+    "title": "مبيعات المنازل الجاهزة في دبي ترتفع خلال Q3 2026",
+    "bullets": [
+      "صفقات المنازل الجاهزة زادت +18.1% مقارنة بـ Q2 إلى 10,439 صفقة",
+      "المبيعات السكنية بلغت 75.84 مليار درهم عبر 35,665 وحدة",
+      "أسعار الشقق المماثلة تغيرت 0.4% فقط والفلل 1.1% خلال الربع"
+    ],
+    "keywords_en": [
+      "dubai",
+      "ready homes",
+      "sales",
+      "prices",
+      "rents"
+    ],
+    "visual_hint": "photo",
+    "chart": {
+      "type": "stat",
+      "value": "+18.1%",
+      "label": "صفقات المنازل الجاهزة في Q3 مقارنة بـ Q2",
+      "sub": "10,439 صفقة"
+    },
+    "photo": {
+      "kind": "library",
+      "id": "commons-77350166",
+      "file": "images/library/commons-77350166.jpg",
+      "attribution": "imran shahabuddin / CC BY 2.0 / Wikimedia Commons",
+      "licence_basis": "CC BY 2.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Dubai_skyline_(25901817975).jpg",
+      "article_url": "https://www.arabianbusiness.com/real-estate/dubai-property-market-shifts-as-ready-home-sales-jump-18-and-prices-stabilise"
+    },
+    "visual": "photo",
+    "photo_reason": "matched topic dubai-skyline (score 1.75)"
+  },
+  {
+    "url": "https://www.khaleejtimes.com/business/property/dubai-ready-villa-sales-jump-october",
+    "domain": "khaleejtimes.com",
+    "published": "2026-11-19",
+    "title": "مبيعات الفلل الجاهزة في دبي تقفز في أكتوبر",
+    "bullets": [
+      "صفقات الفلل الجاهزة ارتفعت +34.1% عن سبتمبر من 211 إلى 283 صفقة",
+      "صفقات السوق الثانوية السكنية زادت +19.8% إلى 3,861 صفقة",
+      "قيمة المبيعات الثانوية ارتفعت +27.9% إلى 11.8 مليار درهم"
+    ],
+    "keywords_en": [
+      "dubai",
+      "villas",
+      "secondary market",
+      "ready homes"
+    ],
+    "visual_hint": "data",
+    "chart": {
+      "type": "compare",
+      "label": "صفقات الفلل الجاهزة",
+      "items": [
+        {
+          "name": "سبتمبر",
+          "value": 211,
+          "display": "211"
+        },
+        {
+          "name": "أكتوبر",
+          "value": 283,
+          "display": "283"
+        }
+      ],
+      "unit": "عدد الصفقات"
+    },
+    "photo": null,
+    "visual": "data",
+    "photo_reason": "chart from the article figures"
+  },
+  {
+    "url": "https://www.arabianbusiness.com/real-estate/dubai-property-off-plan-apartments-now-cheaper-than-ready-homes-as-buyers-find-lower-entry-prices",
+    "domain": "arabianbusiness.com",
+    "published": "2026-11-17",
+    "title": "شقق الخارطة في دبي أصبحت أرخص من الشقق الجاهزة",
+    "bullets": [
+      "السعر الوسيط لشقق الخارطة في أكتوبر 1.108 مليون درهم بتغير -13.4% سنوياً",
+      "السعر الوسيط للشقق الجاهزة ارتفع +1.3% إلى 1.231 مليون درهم",
+      "صفقات شقق الخارطة تراجعت -51.5% سنوياً إلى 5,775 صفقة"
+    ],
+    "keywords_en": [
+      "dubai",
+      "off-plan",
+      "apartments",
+      "studios",
+      "dubai south"
+    ],
+    "visual_hint": "data",
+    "chart": {
+      "type": "compare",
+      "label": "السعر الوسيط للشقة في أكتوبر 2026",
+      "items": [
+        {
+          "name": "على الخارطة",
+          "value": 1.108,
+          "display": "1.108"
+        },
+        {
+          "name": "جاهزة",
+          "value": 1.231,
+          "display": "1.231"
+        }
+      ],
+      "unit": "مليون درهم"
+    },
+    "photo": {
+      "kind": "library",
+      "id": "commons-82583102",
+      "file": "images/library/commons-82583102.jpg",
+      "attribution": "Robert Bock / CC0 / Wikimedia Commons",
+      "licence_basis": "CC0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Dubai_skyline_unsplash.jpg",
+      "article_url": "https://www.arabianbusiness.com/real-estate/dubai-property-off-plan-apartments-now-cheaper-than-ready-homes-as-buyers-find-lower-entry-prices"
+    },
+    "visual": "photo",
+    "photo_reason": "matched topic dubai-skyline (score 1)"
+  },
+  {
+    "url": "https://www.arabianbusiness.com/real-estate/dubai-luxury-property-sales-hit-23-2bn-as-13-apartments-sell-for-over-aed100m-each",
+    "domain": "arabianbusiness.com",
+    "published": "2026-11-17",
+    "title": "مبيعات العقارات الفاخرة في دبي تبلغ 85.3 مليار درهم",
+    "bullets": [
+      "المطورون باعوا 6,974 منزلاً فوق 5 ملايين درهم من يناير إلى أكتوبر",
+      "13 شقة بيعت بأكثر من 100 مليون درهم لكل منها",
+      "الفلل شكلت 57% من قيمة المبيعات الفاخرة على الخارطة"
+    ],
+    "keywords_en": [
+      "dubai",
+      "luxury",
+      "villas",
+      "palm jumeirah",
+      "la mer"
+    ],
+    "visual_hint": "photo",
+    "chart": {
+      "type": "share",
+      "value": 57,
+      "label": "حصة الفلل من قيمة مبيعات الخارطة الفاخرة",
+      "part_label": "فلل 57%",
+      "rest_label": "شقق ومنازل 43%"
+    },
+    "photo": null,
+    "visual": "data",
+    "photo_reason": "chart from the article figures"
+  },
+  {
+    "url": "https://www.arabianbusiness.com/real-estate/dubai-homebuyers-mortgage-uae-banks-emaar",
+    "domain": "arabianbusiness.com",
+    "published": "2026-11-20",
+    "title": "إعمار تتيح لعملائها مقارنة عروض التمويل العقاري من أكثر من 20 بنكاً",
+    "bullets": [
+      "شراكة بين إعمار ومنصة Huspy لمقارنة القروض وأسعار الفائدة في خطوة واحدة",
+      "الخدمة دون رسوم استشارية من Huspy وتشمل الشراء والتسليم وإعادة التمويل",
+      "شروط القروض والأهلية تحددها البنوك المشاركة"
+    ],
+    "keywords_en": [
+      "dubai",
+      "mortgage",
+      "banks",
+      "emaar",
+      "finance"
+    ],
+    "visual_hint": "ai",
+    "ai_image": {
+      "file": "test-mix/ai-1.png"
+    },
+    "photo": {
+      "kind": "ai",
+      "url": null,
+      "file": "test-mix/ai-1.png",
+      "attribution": "صورة توضيحية مولّدة بالذكاء الاصطناعي",
+      "article_url": "https://www.arabianbusiness.com/real-estate/dubai-homebuyers-mortgage-uae-banks-emaar"
+    },
+    "visual": "ai",
+    "photo_reason": "AI illustration 1 of max 3"
+  }
+]
