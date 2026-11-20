@@ -15,11 +15,22 @@ const have = new Set(manifest.map(e => e.id));
 const strip = s => (s || '').replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim();
 const okLicence = l => /^(cc0|public domain|pd\b|cc by \d(\.\d)?|cc by \d(\.\d)? [a-z]+|cc-by-\d)/i.test(l) && !/sa|nc|nd/i.test(l.replace(/^public domain/i, ''));
 
+const sleep = ms => new Promise(r => setTimeout(r, ms));
+const BLOCK = /college|university|school|iss\d|view of earth|satellite|map|logo|diagram|interior|night sky|portrait/i;
+// Polite fetch: paced, retries 429/5xx with backoff.
+async function get(url) {
+  for (let i = 0; i < 5; i++) {
+    await sleep(1500);
+    const r = await fetch(url, { headers: { 'User-Agent': UA } });
+    if (r.ok) return r;
+    if (r.status !== 429 && r.status < 500) throw new Error(`HTTP ${r.status}`);
+    await sleep(Number(r.headers.get('retry-after')) * 1000 || 5000 * 2 ** i);
+  }
+  throw new Error('gave up after retries');
+}
 async function api(params) {
   const u = 'https://commons.wikimedia.org/w/api.php?' + new URLSearchParams({ format: 'json', origin: '*', ...params });
-  const r = await fetch(u, { headers: { 'User-Agent': UA } });
-  if (!r.ok) throw new Error(`Commons API ${r.status}`);
-  return r.json();
+  return (await get(u)).json();
 }
 
 let added = 0;
@@ -37,13 +48,14 @@ for (const q of queries) {
     if (need <= 0) break;
     const ii = p.imageinfo?.[0]; if (!ii) continue;
     const id = `commons-${p.pageid}`; if (have.has(id)) continue;
+    const t = p.title.toLowerCase();
+    if (BLOCK.test(t) || !(q.must || []).some(w => t.includes(w))) continue;
     const md = ii.extmetadata || {};
     const lic = strip(md.LicenseShortName?.value);
     if (!okLicence(lic)) continue;
     if (strip(md.Restrictions?.value)) continue;
     if (ii.mime !== 'image/jpeg' || ii.width < 1600 || ii.width / ii.height < 1.3) continue;
-    const r = await fetch(ii.thumburl, { headers: { 'User-Agent': UA } });
-    if (!r.ok) continue;
+    let r; try { r = await get(ii.thumburl); } catch { continue; }
     const buf = Buffer.from(await r.arrayBuffer());
     const file = `images/library/${id}.jpg`;
     fs.writeFileSync(path.join(ROOT, file), buf);

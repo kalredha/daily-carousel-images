@@ -1,20 +1,300 @@
 [
-  {"topic": "dubai-skyline", "query": "Dubai skyline", "keywords": ["dubai", "skyline", "market", "property", "real estate", "prices", "sales", "transactions", "economy"]},
-  {"topic": "downtown-dubai", "query": "Downtown Dubai Burj Khalifa", "keywords": ["downtown", "burj khalifa", "emaar", "luxury", "prime", "dubai"]},
-  {"topic": "dubai-marina", "query": "Dubai Marina towers", "keywords": ["marina", "jbr", "apartments", "rent", "rental", "tower", "dubai"]},
-  {"topic": "palm-jumeirah", "query": "Palm Jumeirah aerial", "keywords": ["palm", "jumeirah", "villa", "luxury", "waterfront", "nakheel", "island"]},
-  {"topic": "business-bay", "query": "Business Bay Dubai", "keywords": ["business bay", "office", "commercial", "canal", "dubai"]},
-  {"topic": "dubai-creek", "query": "Dubai Creek Harbour", "keywords": ["creek", "harbour", "deira", "old dubai", "waterfront"]},
-  {"topic": "abu-dhabi", "query": "Abu Dhabi skyline", "keywords": ["abu dhabi", "aldar", "capital", "adgm", "reem", "yas", "saadiyat"]},
-  {"topic": "sharjah", "query": "Sharjah skyline", "keywords": ["sharjah", "arada", "northern emirates"]},
-  {"topic": "ras-al-khaimah", "query": "Ras Al Khaimah", "keywords": ["ras al khaimah", "rak", "marjan", "wynn", "northern emirates"]},
-  {"topic": "dubai-metro", "query": "Dubai Metro train", "keywords": ["metro", "rta", "transport", "blue line", "infrastructure", "rail", "road"]},
-  {"topic": "construction", "query": "Dubai construction crane", "keywords": ["construction", "off-plan", "offplan", "handover", "supply", "developer", "project", "launch", "delivery"]},
-  {"topic": "jlt", "query": "Jumeirah Lake Towers", "keywords": ["jlt", "lake towers", "dmcc", "apartments"]},
-  {"topic": "difc", "query": "Dubai International Financial Centre", "keywords": ["difc", "finance", "bank", "banking", "mortgage", "investment", "fund", "central bank", "interest rate"]},
-  {"topic": "airport", "query": "Dubai International Airport terminal", "keywords": ["airport", "dxb", "al maktoum", "dwc", "aviation", "tourism", "emirates airline", "visitors"]},
-  {"topic": "dubai-villas", "query": "Dubai villa community", "keywords": ["villa", "townhouse", "community", "family", "dubai hills", "arabian ranches", "secondary"]},
-  {"topic": "dubai-hotel", "query": "Dubai hotel Jumeirah beach", "keywords": ["hotel", "hospitality", "tourism", "short-term", "holiday home", "beach"]},
-  {"topic": "expo-city", "query": "Expo City Dubai", "keywords": ["expo", "expo city", "south", "dubai south", "events"]},
-  {"topic": "dubai-port", "query": "Jebel Ali port", "keywords": ["port", "trade", "jebel ali", "logistics", "dp world", "warehouse", "industrial", "gdp", "non-oil"]}
+ {
+  "topic": "dubai-skyline",
+  "query": "Dubai skyline",
+  "keywords": [
+   "dubai",
+   "skyline",
+   "market",
+   "property",
+   "real estate",
+   "prices",
+   "sales",
+   "transactions",
+   "economy"
+  ],
+  "must": [
+   "dubai"
+  ]
+ },
+ {
+  "topic": "downtown-dubai",
+  "query": "Downtown Dubai Burj Khalifa",
+  "keywords": [
+   "downtown",
+   "burj khalifa",
+   "emaar",
+   "luxury",
+   "prime",
+   "dubai"
+  ],
+  "must": [
+   "burj khalifa",
+   "downtown"
+  ]
+ },
+ {
+  "topic": "dubai-marina",
+  "query": "Dubai Marina towers",
+  "keywords": [
+   "marina",
+   "jbr",
+   "apartments",
+   "rent",
+   "rental",
+   "tower",
+   "dubai"
+  ],
+  "must": [
+   "marina"
+  ]
+ },
+ {
+  "topic": "palm-jumeirah",
+  "query": "Palm Jumeirah aerial",
+  "keywords": [
+   "palm",
+   "jumeirah",
+   "villa",
+   "luxury",
+   "waterfront",
+   "nakheel",
+   "island"
+  ],
+  "must": [
+   "palm"
+  ]
+ },
+ {
+  "topic": "business-bay",
+  "query": "Business Bay Dubai",
+  "keywords": [
+   "business bay",
+   "office",
+   "commercial",
+   "canal",
+   "dubai"
+  ],
+  "must": [
+   "business bay"
+  ]
+ },
+ {
+  "topic": "dubai-creek",
+  "query": "Dubai Creek Harbour",
+  "keywords": [
+   "creek",
+   "harbour",
+   "deira",
+   "old dubai",
+   "waterfront"
+  ],
+  "must": [
+   "creek"
+  ]
+ },
+ {
+  "topic": "abu-dhabi",
+  "query": "Abu Dhabi skyline",
+  "keywords": [
+   "abu dhabi",
+   "aldar",
+   "capital",
+   "adgm",
+   "reem",
+   "yas",
+   "saadiyat"
+  ],
+  "must": [
+   "abu dhabi"
+  ]
+ },
+ {
+  "topic": "sharjah",
+  "query": "Sharjah skyline",
+  "keywords": [
+   "sharjah",
+   "arada",
+   "northern emirates"
+  ],
+  "must": [
+   "sharjah"
+  ]
+ },
+ {
+  "topic": "ras-al-khaimah",
+  "query": "Ras Al Khaimah",
+  "keywords": [
+   "ras al khaimah",
+   "rak",
+   "marjan",
+   "wynn",
+   "northern emirates"
+  ],
+  "must": [
+   "ras al khaimah",
+   "rak"
+  ]
+ },
+ {
+  "topic": "dubai-metro",
+  "query": "Dubai Metro train",
+  "keywords": [
+   "metro",
+   "rta",
+   "transport",
+   "blue line",
+   "infrastructure",
+   "rail",
+   "road"
+  ],
+  "must": [
+   "metro"
+  ]
+ },
+ {
+  "topic": "construction",
+  "query": "Dubai construction crane",
+  "keywords": [
+   "construction",
+   "off-plan",
+   "offplan",
+   "handover",
+   "supply",
+   "developer",
+   "project",
+   "launch",
+   "delivery"
+  ],
+  "must": [
+   "construction",
+   "crane",
+   "building site"
+  ]
+ },
+ {
+  "topic": "jlt",
+  "query": "Jumeirah Lake Towers",
+  "keywords": [
+   "jlt",
+   "lake towers",
+   "dmcc",
+   "apartments"
+  ],
+  "must": [
+   "jumeirah lake",
+   "jlt",
+   "lake towers"
+  ]
+ },
+ {
+  "topic": "difc",
+  "query": "Dubai International Financial Centre",
+  "keywords": [
+   "difc",
+   "finance",
+   "bank",
+   "banking",
+   "mortgage",
+   "investment",
+   "fund",
+   "central bank",
+   "interest rate"
+  ],
+  "must": [
+   "difc",
+   "financial centre",
+   "financial center",
+   "gate"
+  ]
+ },
+ {
+  "topic": "airport",
+  "query": "Dubai International Airport terminal",
+  "keywords": [
+   "airport",
+   "dxb",
+   "al maktoum",
+   "dwc",
+   "aviation",
+   "tourism",
+   "emirates airline",
+   "visitors"
+  ],
+  "must": [
+   "airport",
+   "terminal"
+  ]
+ },
+ {
+  "topic": "dubai-villas",
+  "query": "Dubai villa community",
+  "keywords": [
+   "villa",
+   "townhouse",
+   "community",
+   "family",
+   "dubai hills",
+   "arabian ranches",
+   "secondary"
+  ],
+  "must": [
+   "villa",
+   "residential",
+   "community",
+   "ranches",
+   "springs",
+   "meadows"
+  ]
+ },
+ {
+  "topic": "dubai-hotel",
+  "query": "Dubai hotel Jumeirah beach",
+  "keywords": [
+   "hotel",
+   "hospitality",
+   "tourism",
+   "short-term",
+   "holiday home",
+   "beach"
+  ],
+  "must": [
+   "hotel",
+   "jumeirah",
+   "beach"
+  ]
+ },
+ {
+  "topic": "expo-city",
+  "query": "Expo City Dubai",
+  "keywords": [
+   "expo",
+   "expo city",
+   "south",
+   "dubai south",
+   "events"
+  ],
+  "must": [
+   "expo"
+  ]
+ },
+ {
+  "topic": "dubai-port",
+  "query": "Jebel Ali port",
+  "keywords": [
+   "port",
+   "trade",
+   "jebel ali",
+   "logistics",
+   "dp world",
+   "warehouse",
+   "industrial",
+   "gdp",
+   "non-oil"
+  ],
+  "must": [
+   "jebel ali",
+   "port"
+  ]
+ }
 ]
