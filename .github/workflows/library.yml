@@ -4,8 +4,6 @@ on:
   push:
     branches: [main]
     paths: ['library/queries.json', 'scripts/fetch-library.mjs', '.github/workflows/library.yml']
-  schedule:
-    - cron: '17 1 * * 1'   # Mondays 05:17 Dubai
 permissions:
   contents: write
 concurrency: library

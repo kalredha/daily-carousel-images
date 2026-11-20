@@ -12,7 +12,7 @@ Photo store and slide builder for the @khaled.estates daily news Story pipeline.
 
 ## How it works
 
-1. `.github/workflows/library.yml` (GitHub Actions, free for public repos) refreshes the library weekly and whenever `library/queries.json` changes. It commits with the repository's own token. `library/excluded.json` lists photos reviewed and rejected, which are never re-added.
+1. `.github/workflows/library.yml` (GitHub Actions, free for public repos) adds photos when `library/queries.json` changes or when run by hand (Actions tab → Refresh photo library → Run workflow). It never runs on a timer, so no unreviewed photo reaches a slide without a commit you can see; review new photos before the next daily run and add rejects to `library/excluded.json`. It commits with the repository's own token. `library/excluded.json` lists photos reviewed and rejected, which are never re-added.
 2. The daily 07:00 Dubai routine clones this repo (read-only), writes the ranked stories to `stories.json`, and runs:
    ```
    npm ci
