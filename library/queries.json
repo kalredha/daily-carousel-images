@@ -160,7 +160,7 @@
  },
  {
   "topic": "construction",
-  "query": "Dubai construction crane",
+  "query": "Dubai construction cranes",
   "keywords": [
    "construction",
    "off-plan",
@@ -176,9 +176,7 @@
    "escrow"
   ],
   "must": [
-   "construction",
-   "crane",
-   "building site"
+   "dubai"
   ]
  },
  {
@@ -287,7 +285,7 @@
   "keywords": [
    "expo",
    "expo city",
-   "dubai south"
+   "expo 2020"
   ],
   "must": [
    "expo"
