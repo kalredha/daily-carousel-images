@@ -4,14 +4,25 @@
   "query": "Dubai skyline",
   "keywords": [
    "dubai",
-   "skyline",
    "market",
    "property",
    "real estate",
    "prices",
    "sales",
    "transactions",
-   "economy"
+   "rent",
+   "rental",
+   "rents",
+   "ejari",
+   "contracts",
+   "dld",
+   "dubai land department",
+   "record",
+   "economy",
+   "investment",
+   "investors",
+   "mortgage",
+   "freehold"
   ],
   "must": [
    "dubai"
@@ -24,9 +35,8 @@
    "downtown",
    "burj khalifa",
    "emaar",
-   "luxury",
-   "prime",
-   "dubai"
+   "dubai mall",
+   "dubai opera"
   ],
   "must": [
    "burj khalifa",
@@ -37,13 +47,10 @@
   "topic": "dubai-marina",
   "query": "Dubai Marina towers",
   "keywords": [
+   "dubai marina",
    "marina",
    "jbr",
-   "apartments",
-   "rent",
-   "rental",
-   "tower",
-   "dubai"
+   "bluewaters"
   ],
   "must": [
    "marina"
@@ -53,13 +60,11 @@
   "topic": "palm-jumeirah",
   "query": "Palm Jumeirah aerial",
   "keywords": [
+   "palm jumeirah",
    "palm",
-   "jumeirah",
-   "villa",
-   "luxury",
-   "waterfront",
    "nakheel",
-   "island"
+   "atlantis",
+   "jumeirah islands"
   ],
   "must": [
    "palm"
@@ -73,7 +78,7 @@
    "office",
    "commercial",
    "canal",
-   "dubai"
+   "grade a"
   ],
   "must": [
    "business bay"
@@ -86,8 +91,8 @@
    "creek",
    "harbour",
    "deira",
-   "old dubai",
-   "waterfront"
+   "bur dubai",
+   "old dubai"
   ],
   "must": [
    "creek"
@@ -99,11 +104,11 @@
   "keywords": [
    "abu dhabi",
    "aldar",
-   "capital",
    "adgm",
    "reem",
    "yas",
-   "saadiyat"
+   "saadiyat",
+   "adrec"
   ],
   "must": [
    "abu dhabi"
@@ -115,7 +120,7 @@
   "keywords": [
    "sharjah",
    "arada",
-   "northern emirates"
+   "aljada"
   ],
   "must": [
    "sharjah"
@@ -129,7 +134,7 @@
    "rak",
    "marjan",
    "wynn",
-   "northern emirates"
+   "al marjan"
   ],
   "must": [
    "ras al khaimah",
@@ -144,9 +149,10 @@
    "rta",
    "transport",
    "blue line",
-   "infrastructure",
    "rail",
-   "road"
+   "etihad rail",
+   "road",
+   "tram"
   ],
   "must": [
    "metro"
@@ -160,11 +166,14 @@
    "off-plan",
    "offplan",
    "handover",
+   "handovers",
    "supply",
-   "developer",
-   "project",
+   "completion",
+   "completions",
    "launch",
-   "delivery"
+   "delivery",
+   "contractor",
+   "escrow"
   ],
   "must": [
    "construction",
@@ -177,9 +186,10 @@
   "query": "Jumeirah Lake Towers",
   "keywords": [
    "jlt",
-   "lake towers",
+   "jumeirah lake",
    "dmcc",
-   "apartments"
+   "jumeirah village",
+   "jvc"
   ],
   "must": [
    "jumeirah lake",
@@ -192,14 +202,16 @@
   "query": "Dubai International Financial Centre",
   "keywords": [
    "difc",
-   "finance",
    "bank",
    "banking",
-   "mortgage",
-   "investment",
-   "fund",
    "central bank",
-   "interest rate"
+   "interest rate",
+   "rates",
+   "fund",
+   "reit",
+   "ipo",
+   "finance",
+   "financial"
   ],
   "must": [
    "difc",
@@ -217,9 +229,9 @@
    "al maktoum",
    "dwc",
    "aviation",
-   "tourism",
    "emirates airline",
-   "visitors"
+   "passengers",
+   "flydubai"
   ],
   "must": [
    "airport",
@@ -231,12 +243,14 @@
   "query": "Dubai villa community",
   "keywords": [
    "villa",
+   "villas",
    "townhouse",
-   "community",
-   "family",
+   "townhouses",
    "dubai hills",
    "arabian ranches",
-   "secondary"
+   "community",
+   "communities",
+   "secondary market"
   ],
   "must": [
    "villa",
@@ -252,11 +266,14 @@
   "query": "Dubai hotel Jumeirah beach",
   "keywords": [
    "hotel",
+   "hotels",
    "hospitality",
    "tourism",
+   "tourists",
+   "visitors",
    "short-term",
    "holiday home",
-   "beach"
+   "holiday homes"
   ],
   "must": [
    "hotel",
@@ -270,9 +287,7 @@
   "keywords": [
    "expo",
    "expo city",
-   "south",
-   "dubai south",
-   "events"
+   "dubai south"
   ],
   "must": [
    "expo"
