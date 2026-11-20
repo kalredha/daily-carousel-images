@@ -1,0 +1,21 @@
+name: TEMP fetch test asset
+on:
+  push:
+    branches: [main]
+    paths: ['test-mix/asset-url.txt']
+permissions:
+  contents: write
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          url=$(head -1 test-mix/asset-url.txt)
+          case "$url" in https://d8j0ntlcm91z4.cloudfront.net/*) ;; *) echo "unexpected host"; exit 1;; esac
+          curl -fsSL --max-filesize 15000000 -o test-mix/ai-1.png "$url"
+          file test-mix/ai-1.png
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add test-mix/ai-1.png && git commit -m "Fetch AI test illustration" && git push
