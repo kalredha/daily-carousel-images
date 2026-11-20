@@ -10,7 +10,8 @@ const UA = 'daily-carousel-images-bot/1.0 (GitHub Actions; photo library refresh
 const queries = JSON.parse(fs.readFileSync(path.join(ROOT, 'library/queries.json'), 'utf8'));
 const manifestPath = path.join(ROOT, 'manifest.json');
 const manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf8'));
-const have = new Set(manifest.map(e => e.id));
+const excluded = JSON.parse(fs.readFileSync(path.join(ROOT, 'library/excluded.json'), 'utf8')).ids || {};
+const have = new Set([...manifest.map(e => e.id), ...Object.keys(excluded)]);
 
 const strip = s => (s || '').replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim();
 const okLicence = l => /^(cc0|public domain|pd\b|cc by \d(\.\d)?|cc by \d(\.\d)? [a-z]+|cc-by-\d)/i.test(l) && !/sa|nc|nd/i.test(l.replace(/^public domain/i, ''));

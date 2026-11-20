@@ -1,40 +1,36 @@
 # daily-carousel-images
 
-Image store for the @khaled.estates daily news Story pipeline.
+Photo store and slide builder for the @khaled.estates daily news Story pipeline.
 
 ## Rights rule
 
-**Only images with confirmed redistribution rights may be stored here.** This repository is public, so every file in it is openly downloadable. Before an image is added:
+**Only images with confirmed redistribution rights may be stored here.** This repository is public, so every file in it is openly downloadable.
 
-1. The licence or written permission must allow redistribution and use on social media.
-2. The image must have an entry in `manifest.json`.
-3. The source must be listed in `LICENSES.md` with its licence basis and the required attribution text.
+- **Library photos** (`images/library/`) come from Wikimedia Commons and are limited to CC0, public domain and CC BY licences. No share-alike, no non-commercial, and nothing with a restriction flag. Every one has its source, licence and attribution in `manifest.json` and `LICENSES.md`, and the attribution is printed under the photo on the slide.
+- **Article photos** from news sites are used only for domains listed in `config/authorized-sources.json`, which you add only with written permission on file. The list is empty by default, so no article photos are used.
+- If no approved photo fits, the slide keeps the empty placeholder. A missing photo never holds up the batch.
 
-Images without all three must not be committed.
+## How it works
+
+1. `.github/workflows/library.yml` (GitHub Actions, free for public repos) refreshes the library weekly and whenever `library/queries.json` changes. It commits with the repository's own token. `library/excluded.json` lists photos reviewed and rejected, which are never re-added.
+2. The daily 07:00 Dubai routine clones this repo (read-only), writes the ranked stories to `stories.json`, and runs:
+   ```
+   npm ci
+   node scripts/pick.js stories.json
+   node build.js stories.json out/
+   ```
+   `pick.js` binds each photo to the story's **article URL**, so re-ranking moves the photo with its story. `build.js` renders 1080×1350 PNGs with Playwright and writes `build-report.json`, which lists the photo, its SHA-256 and the attribution for each slide.
 
 ## Layout
 
 ```
-images/          one image per story, named NN-slug.jpg
-                 NN = slide number, e.g. 01-abu-dhabi-transactions.jpg
-manifest.json    maps each story to its image file, source URL, licence basis and date added
-LICENSES.md      table of image source, licence or permission basis, attribution text
-```
-
-## manifest.json entry format
-
-```json
-{
-  "story": "Abu Dhabi transactions",
-  "file": "images/01-abu-dhabi-transactions.jpg",
-  "source_url": "https://example.com/original-image-page",
-  "licence_basis": "Unsplash Licence",
-  "date_added": "2026-11-20"
-}
-```
-
-## Raw image URLs
-
-```
-https://raw.githubusercontent.com/kalredha/daily-carousel-images/main/images/<file>
+images/library/         approved photos (commons-<pageid>.jpg)
+manifest.json           one entry per photo: file, topic, keywords, source URL, licence basis, attribution, date added
+LICENSES.md             table of image source, licence basis, attribution text (generated)
+library/queries.json    topics, search terms and matching keywords
+library/excluded.json   reviewed and rejected photos
+config/authorized-sources.json   news domains whose article photos may be used (empty)
+scripts/fetch-library.mjs        library refresh (runs in Actions)
+scripts/pick.js         photo-to-story matching
+build.js                slide renderer
 ```

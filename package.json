@@ -1,0 +1,12 @@
+{
+  "name": "daily-carousel-images",
+  "private": true,
+  "description": "Photo store and slide builder for the @khaled.estates daily news Stories",
+  "scripts": {
+    "pick": "node scripts/pick.js",
+    "build": "node build.js"
+  },
+  "dependencies": {
+    "@fontsource/almarai": "5.1.0"
+  }
+}
