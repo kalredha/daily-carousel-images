@@ -1,6 +1,6 @@
 # Image licences
 
-Every image in `images/` has a row here. Library photos come from Wikimedia Commons and are limited to CC0, public domain and CC BY licences.
+Every image in `images/` has a row here. Library photos come from Wikimedia Commons and are limited to CC0, public domain and CC BY licences. AI illustrations in `images/ai/` were generated for this account, reviewed before use, and are labelled on the slide.
 
 | Image file | Image source | Licence or permission basis | Attribution text |
 |---|---|---|---|
@@ -35,3 +35,4 @@ Every image in `images/` has a row here. Library photos come from Wikimedia Comm
 | images/library/commons-122666128.jpg | [First Afternoon at Expo 2020 (51731197839).jpg](https://commons.wikimedia.org/wiki/File:First_Afternoon_at_Expo_2020_(51731197839).jpg) | CC BY 2.0 ([terms](https://creativecommons.org/licenses/by/2.0)) | Dennis Sylvester Hurd from Vancouver, Canada / CC BY 2.0 / Wikimedia Commons |
 | images/library/commons-122666125.jpg | [First Afternoon at Expo 2020 (51730795603).jpg](https://commons.wikimedia.org/wiki/File:First_Afternoon_at_Expo_2020_(51730795603).jpg) | CC BY 2.0 ([terms](https://creativecommons.org/licenses/by/2.0)) | Dennis Sylvester Hurd from Vancouver, Canada / CC BY 2.0 / Wikimedia Commons |
 | images/library/commons-60000592.jpg | [Business Bay, Dubai, November 2015 - panoramio.jpg](https://commons.wikimedia.org/wiki/File:Business_Bay,_Dubai,_November_2015_-_panoramio.jpg) | CC BY 3.0 ([terms](https://creativecommons.org/licenses/by/3.0)) | wilhelmtittes / CC BY 3.0 / Wikimedia Commons |
+| images/ai/hf-cb416c2b.png | Mortgage offers and keys (flat illustration) | AI illustration generated for @khaled.estates with Higgsfield (Z Image); labelled on the slide as AI-generated | صورة توضيحية مولّدة بالذكاء الاصطناعي |

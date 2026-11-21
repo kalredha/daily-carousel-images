@@ -75,8 +75,8 @@ for (const q of queries) {
 }
 fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2) + '\n');
 
-const rows = manifest.map(e => `| ${e.file} | [${e.title.replace(/\|/g, '/')}](${e.source_url}) | ${e.licence_basis}${e.licence_url ? ` ([terms](${e.licence_url}))` : ''} | ${e.attribution.replace(/\|/g, '/')} |`);
+const rows = manifest.map(e => `| ${e.file} | ${e.source_url ? `[${e.title.replace(/\|/g, '/')}](${e.source_url})` : e.title} | ${e.licence_basis}${e.licence_url ? ` ([terms](${e.licence_url}))` : ''} | ${e.attribution.replace(/\|/g, '/')} |`);
 fs.writeFileSync(path.join(ROOT, 'LICENSES.md'),
-  '# Image licences\n\nEvery image in `images/` has a row here. Library photos come from Wikimedia Commons and are limited to CC0, public domain and CC BY licences.\n\n' +
+  '# Image licences\n\nEvery image in `images/` has a row here. Library photos come from Wikimedia Commons and are limited to CC0, public domain and CC BY licences. AI illustrations in `images/ai/` were generated for this account, reviewed before use, and are labelled on the slide.\n\n' +
   '| Image file | Image source | Licence or permission basis | Attribution text |\n|---|---|---|---|\n' + rows.join('\n') + '\n');
 console.log(`added ${added}, total ${manifest.length}`);

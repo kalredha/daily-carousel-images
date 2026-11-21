@@ -18,7 +18,11 @@ if (!file) { console.error('usage: node scripts/pick.js <stories.json>'); proces
 const stories = JSON.parse(fs.readFileSync(file, 'utf8'));
 const topics = Object.fromEntries(JSON.parse(fs.readFileSync(path.join(ROOT, 'library/queries.json'), 'utf8')).map(q => [q.topic, q.keywords]));
 // Matching keywords come from library/queries.json (one place to tune them), falling back to the manifest copy.
-const library = JSON.parse(fs.readFileSync(path.join(ROOT, 'manifest.json'), 'utf8')).map(e => ({ ...e, keywords: topics[e.topic] || e.keywords }));
+const manifest = JSON.parse(fs.readFileSync(path.join(ROOT, 'manifest.json'), 'utf8'));
+// Photos: matching keywords come from library/queries.json (one place to tune them), falling back to the manifest copy.
+const library = manifest.filter(e => e.kind !== 'ai').map(e => ({ ...e, keywords: topics[e.topic] || e.keywords }));
+// Reviewed AI illustrations stored in the repo (kind "ai"), matched on their own keywords.
+const aiLibrary = manifest.filter(e => e.kind === 'ai');
 const authorised = JSON.parse(fs.readFileSync(path.join(ROOT, 'config/authorized-sources.json'), 'utf8')).domains || [];
 const GENERIC = ['dubai-skyline', 'downtown-dubai', 'business-bay', 'dubai-creek', 'dubai-marina'];
 // Specific places and themes beat the catch-all Dubai skyline topic.
@@ -42,6 +46,13 @@ function bestPhoto(s, used) {
   return g ? { ...g, specific: false } : null;
 }
 
+function bestAi(s, used) {
+  const text = ' ' + [...(s.keywords_en || []), s.title_en || ''].join(' ').toLowerCase() + ' ';
+  const scored = aiLibrary.filter(e => !used.has(e.id)).map(e => ({ e, score: e.keywords.reduce((n, k) => n + (has(text, k) ? 1 : 0), 0), tie: hash(s.url + e.id) }))
+    .filter(x => x.score >= 1).sort((a, b) => b.score - a.score || (a.tie < b.tie ? -1 : 1));
+  return scored[0] || null;
+}
+
 const used = new Set();
 let aiCount = 0, prev = null;
 const mix = { data: 0, photo: 0, ai: 0, none: 0 };
@@ -51,9 +62,10 @@ for (const s of stories) {
   const d = host(s.url);
   const authorisedPhoto = s.og_image && authorised.some(a => d === a || d.endsWith('.' + a));
   const bp = authorisedPhoto ? null : bestPhoto(s, used);
+  const ba = s.ai_image ? null : bestAi(s, used);
   const can = {
     data: validChart(s.chart),
-    ai: !!(s.ai_image && (s.ai_image.url || s.ai_image.file)) && aiCount < MAX_AI,
+    ai: (!!(s.ai_image && (s.ai_image.url || s.ai_image.file)) || !!ba) && aiCount < MAX_AI,
     photo: authorisedPhoto || !!(bp && bp.specific),
     generic: !!bp,
   };
@@ -63,8 +75,9 @@ for (const s of stories) {
   if (type === 'data') { s.visual = 'data'; s.photo_reason = 'chart from the article figures'; }
   else if (type === 'ai') {
     aiCount++; s.visual = 'ai';
-    s.photo = { kind: 'ai', url: s.ai_image.url || null, file: s.ai_image.file || null, attribution: 'صورة توضيحية مولّدة بالذكاء الاصطناعي', article_url: s.url };
-    s.photo_reason = `AI illustration ${aiCount} of max ${MAX_AI}`;
+    if (s.ai_image) s.photo = { kind: 'ai', url: s.ai_image.url || null, file: s.ai_image.file || null, attribution: 'صورة توضيحية مولّدة بالذكاء الاصطناعي', article_url: s.url };
+    else { used.add(ba.e.id); s.photo = { kind: 'ai', id: ba.e.id, file: ba.e.file, attribution: 'صورة توضيحية مولّدة بالذكاء الاصطناعي', article_url: s.url }; }
+    s.photo_reason = `AI illustration ${aiCount} of max ${MAX_AI}${ba && !s.ai_image ? ` (library ${ba.e.id}, score ${ba.score})` : ''}`;
   } else if (type === 'photo' && authorisedPhoto) {
     s.visual = 'photo';
     s.photo = { kind: 'article', url: s.og_image, attribution: `Photo: ${d}`, licence_basis: 'Written permission on file (config/authorized-sources.json)', article_url: s.url };

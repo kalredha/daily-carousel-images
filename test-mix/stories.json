@@ -194,17 +194,14 @@
       "finance"
     ],
     "visual_hint": "ai",
-    "ai_image": {
-      "file": "test-mix/ai-1.png"
-    },
     "photo": {
       "kind": "ai",
-      "url": null,
-      "file": "test-mix/ai-1.png",
+      "id": "ai-hf-cb416c2b",
+      "file": "images/ai/hf-cb416c2b.png",
       "attribution": "صورة توضيحية مولّدة بالذكاء الاصطناعي",
       "article_url": "https://www.arabianbusiness.com/real-estate/dubai-homebuyers-mortgage-uae-banks-emaar"
     },
     "visual": "ai",
-    "photo_reason": "AI illustration 1 of max 3"
+    "photo_reason": "AI illustration 1 of max 3 (library ai-hf-cb416c2b, score 3)"
   }
 ]
